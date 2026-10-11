@@ -62,7 +62,8 @@
       "<rootDir>/tests/**/*.test.tsx"
     ],
     "moduleNameMapper": {
-      "^lucide-react-native$": "<rootDir>/node_modules/lucide-react-native/dist/cjs/lucide-react-native.js"
+      "^lucide-react-native$": "<rootDir>/node_modules/lucide-react-native/dist/cjs/lucide-react-native.js",
+      "\\.(otf|ttf)$": "<rootDir>/tests/font-stub.js"
     },
     "testTimeout": 120000
   }
