@@ -1,0 +1,19 @@
+# dependencies & build output (each project also has its own .gitignore)
+node_modules/
+.expo/
+.next/
+dist-*/
+preview-dist/
+*.tsbuildinfo
+
+# licensed fonts are never committed (see app/assets/fonts/README.md)
+*.otf
+*.ttf
+*.woff
+*.woff2
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
