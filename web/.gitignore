@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+preview-dist
+next-env.d.ts
+*.tsbuildinfo
+.DS_Store
+
+# Thmanyah font files: license forbids redistribution (see public/fonts/README.md)
+public/fonts/*.woff2
+public/fonts/*.woff
+public/fonts/*.otf
+public/fonts/*.ttf
