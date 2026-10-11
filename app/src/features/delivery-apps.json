@@ -1,0 +1,9 @@
+[
+  { "id": "nana", "name": "نعناع", "nameEn": "Nana", "package": "com.exa.nanamarket", "kind": "بقالة", "tint": "#3FBF7F" },
+  { "id": "ninja", "name": "نينجا", "nameEn": "Ninja", "package": "com.ananinja.lava", "kind": "بقالة", "tint": "#E9C46A" },
+  { "id": "hungerstation", "name": "هنقرستيشن", "nameEn": "HungerStation", "package": "com.hungerstation.android.web", "kind": "مطاعم وبقالة", "tint": "#F2B84B" },
+  { "id": "toyou", "name": "تويو", "nameEn": "ToYou", "package": "com.arammeem.android.apps.toyou", "kind": "مطاعم وبقالة", "tint": "#9B8CF0" },
+  { "id": "keeta", "name": "كيتا", "nameEn": "Keeta", "package": "com.sankuai.sailor.afooddelivery", "kind": "مطاعم", "tint": "#F5D547" },
+  { "id": "jahez", "name": "جاهز", "nameEn": "Jahez", "package": "net.jahez", "kind": "مطاعم", "tint": "#E86A6A" },
+  { "id": "mrsool", "name": "مرسول", "nameEn": "Mrsool", "package": "com.mrsool", "kind": "توصيل أي شيء", "tint": "#5BC0A8" }
+]
