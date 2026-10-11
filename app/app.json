@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "مِيزان",
+    "slug": "mizan",
+    "scheme": "mizan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#121417",
+    "primaryColor": "#10B981",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "sa.mizan.app"
+    },
+    "android": {
+      "package": "sa.mizan.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#121417",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": true,
+      "softwareKeyboardLayoutMode": "pan"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/ThmanyahSans-Regular.otf",
+            "./assets/fonts/ThmanyahSans-Medium.otf",
+            "./assets/fonts/ThmanyahSans-Bold.otf",
+            "./assets/fonts/ThmanyahSerifText-Regular.otf",
+            "./assets/fonts/ThmanyahSerifDisplay-Bold.otf",
+            "./assets/fonts/ThmanyahSerifDisplay-Black.otf"
+          ]
+        }
+      ],
+      "expo-audio",
+      [
+        "expo-localization",
+        {
+          "supportsRTL": true,
+          "forcesRTL": true
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "resizeMode": "contain",
+          "backgroundColor": "#121417"
+        }
+      ],
+      "expo-system-ui",
+      "expo-asset",
+      "./plugins/with-delivery-app-queries"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
