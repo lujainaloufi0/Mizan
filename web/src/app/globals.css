@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────── Thmanyah typeface (self-hosted from /public/fonts) ───────── */
+
+@font-face {
+  font-family: 'thmanyahsans';
+  src: url('/fonts/thmanyahsans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'thmanyahsans';
+  src: url('/fonts/thmanyahsans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'thmanyahsans';
+  src: url('/fonts/thmanyahsans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'thmanyahseriftext';
+  src: url('/fonts/thmanyahseriftext-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'thmanyahseriftext';
+  src: url('/fonts/thmanyahseriftext-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'thmanyahserifdisplay';
+  src: url('/fonts/thmanyahserifdisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'thmanyahserifdisplay';
+  src: url('/fonts/thmanyahserifdisplay-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-canvas font-sans text-ink antialiased;
+    font-feature-settings: 'kern' 1;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: rgba(16, 185, 129, 0.35);
+    color: theme('colors.ink.DEFAULT');
+  }
+  :focus-visible {
+    outline: 2px solid theme('colors.sand.DEFAULT');
+    outline-offset: 2px;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  /* one stroke weight for the whole icon family (Lucide + Mizan's own set) */
+  svg.lucide {
+    stroke-width: 1.5px;
+  }
+  svg.lucide.icon-bold {
+    stroke-width: 2.5px;
+  }
+}
+
+@layer components {
+  /* Range slider — track fill driven by --fill (0–100%). RTL: fills from the right. */
+  .mizan-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 48px;
+    background: transparent;
+    cursor: pointer;
+    --fill: 50%;
+  }
+  .mizan-range::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 9999px;
+    background: linear-gradient(to left, theme('colors.sand.DEFAULT') var(--fill), theme('colors.line.DEFAULT') var(--fill));
+  }
+  .mizan-range::-moz-range-track {
+    height: 8px;
+    border-radius: 9999px;
+    background: linear-gradient(to left, theme('colors.sand.DEFAULT') var(--fill), theme('colors.line.DEFAULT') var(--fill));
+  }
+  .mizan-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 32px;
+    height: 32px;
+    margin-top: -12px;
+    border-radius: 9999px;
+    background: theme('colors.mint.DEFAULT');
+    border: 4px solid theme('colors.canvas');
+    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.5), 0 8px 24px -8px rgba(16, 185, 129, 0.6);
+    transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .mizan-range::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 9999px;
+    background: theme('colors.mint.DEFAULT');
+    border: 4px solid theme('colors.canvas');
+  }
+  .mizan-range:active::-webkit-slider-thumb {
+    transform: scale(1.15);
+  }
+  .mizan-range:focus-visible {
+    outline: none;
+  }
+  .mizan-range:focus-visible::-webkit-slider-thumb {
+    box-shadow: 0 0 0 4px rgba(229, 212, 192, 0.5);
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* a faint 8px dot grid: the 8pt system made visible */
+  .grain {
+    background-image: radial-gradient(rgba(229, 212, 192, 0.045) 1px, transparent 1px);
+    background-size: 8px 8px;
+  }
+
+  /* soft mint glow behind hero numbers */
+  .glow-mint {
+    background-image: radial-gradient(120% 80% at 100% 0%, rgba(16, 185, 129, 0.16), transparent 60%);
+  }
+}
